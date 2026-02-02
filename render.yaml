@@ -3,8 +3,8 @@ services:
     name: django-library
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn manage:app"
+    startCommand: "gunicorn lms.wsgi:application"
     envVars:
       - key: DJANGO_SECRET_KEY
-        value: "<your-secret-key>"
+        value: PYTHON_VERSION
     plan: free
